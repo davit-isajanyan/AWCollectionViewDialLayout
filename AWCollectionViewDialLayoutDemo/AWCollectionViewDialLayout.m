@@ -215,11 +215,9 @@
     
     
     
-    CGAffineTransform scaleT = CGAffineTransformMakeScale(scaleFactor, scaleFactor);
-    theAttributes.alpha = scaleFactor;
     theAttributes.hidden = NO;
     
-    theAttributes.transform = CGAffineTransformConcat(scaleT, CGAffineTransformConcat(translationT, rotationT));
+    theAttributes.transform = CGAffineTransformConcat(translationT, rotationT);
     
     return(theAttributes);
 }
